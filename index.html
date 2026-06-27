@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLeaf - Toko Tanaman Hias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="home">
+    <h1>🌿 GreenLeaf</h1>
+    <p>Toko Tanaman Hias</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#produk">Produk</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+</nav>
+
+<section class="hero">
+    <h2>Selamat Datang di GreenLeaf</h2>
+    <p>Temukan tanaman hias terbaik untuk mempercantik rumah Anda.</p>
+    <input type="text" id="search" placeholder="Cari tanaman...">
+</section>
+
+<section id="produk" class="container">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1463320726281-696a485928c7?w=500" alt="Monstera">
+        <h3>Monstera</h3>
+        <p>Rp150.000</p>
+        <button onclick="beli('Monstera', 150000)">Beli</button>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500" alt="Sansevieria">
+        <h3>Sansevieria</h3>
+        <p>Rp85.000</p>
+        <button onclick="beli('Sansevieria', 85000)">Beli</button>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500" alt="Kaktus">
+        <h3>Kaktus Mini</h3>
+        <p>Rp40.000</p>
+        <button onclick="beli('Kaktus Mini', 40000)">Beli</button>
+    </div>
+</section>
+
+<section id="checkout-section">
+    <h3>Keranjang Anda</h3>
+    <ul id="keranjang-list"></ul>
+    <p><strong>Total: Rp<span id="total-harga">0</span></strong></p>
+    
+    <label for="metode-pembayaran">Pilih Metode Pembayaran:</label>
+    <select id="metode-pembayaran">
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="E-Wallet">E-Wallet (OVO/Gopay/Dana)</option>
+        <option value="COD">Bayar di Tempat (COD)</option>
+    </select>
+    
+    <button id="btn-bayar" onclick="prosesPembayaran()">Bayar Sekarang</button>
+</section>
+
+<footer id="kontak">
+    <p>© 2026 GreenLeaf | IzaNailatulFitri-243510358</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
